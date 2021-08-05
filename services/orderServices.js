@@ -14,7 +14,7 @@ const orderServices = {
                 }});
             res.send(result);
         } catch (error) {
-            
+            console.log(error);
         }
         // return res.send('This is an API');
     },
