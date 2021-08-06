@@ -26,6 +26,7 @@ const orderServices = {
             let xmlInput = pmlConvertionService.transformPmlToXml(requestFromClient)
             requestJson = pmlConvertionService.xmlToJSon(xmlInput)
         } catch(error) {
+            console.log(error)
             message = 'Input format error. Please check PML';
             res.status(500).send(message);
             return;
