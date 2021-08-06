@@ -3,7 +3,6 @@ const convert = require('xml-js');
 
 const pmlConvertionService = {
     transformPmlToXml(data) {
-        console.log(data)
         let changedLeftCurleyBrace = data.replaceAll('{', '<')
         let changedOpeningClosingTag = changedLeftCurleyBrace.replaceAll('}', '>')
         const pmlToXML = changedOpeningClosingTag.replaceAll(/\\/g, '/')
